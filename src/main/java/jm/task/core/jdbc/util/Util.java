@@ -4,13 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-// реализуйте настройку соеденения с БД
 public class Util {
-   private static final String URL = "jdbc:mysql://localhost:3306/testKata";
-   private static final String USERNAME = "root";
-   private static final String PASSWORD = "root";
+    private static final String URL = "jdbc:mysql://localhost:3306/testKata";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "root";
 
-    public static Connection getConnection() throws SQLException,ClassNotFoundException {
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -22,6 +21,5 @@ public class Util {
         }
         return connection;
     }
-
-    }
+}
 
